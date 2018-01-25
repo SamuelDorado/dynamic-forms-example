@@ -8,9 +8,10 @@
     <div class="form-row">
       <button type="submit" (click)="onSubmit()" [disabled]="!form.valid">Save</button>
     </div>
+
   </form>
   {{form.value|json}}
-  <div *ngIf="payLoad" class="form-row">
+  <div *ngIf="payLoad" class="form-row" [@flyInOut]="'in'">
     <strong>Saved the following values</strong><br>{{payLoad|json}}
   </div>
 </div>
