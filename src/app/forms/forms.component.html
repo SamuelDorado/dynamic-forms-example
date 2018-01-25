@@ -1,0 +1,16 @@
+<div>
+  <form  [formGroup]="form">
+ 
+    <div *ngFor="let field of fields" class="form-row">
+      <app-form-field [field]="field" [form]="form"></app-form-field>
+    </div>
+ 
+    <div class="form-row">
+      <button type="submit" (click)="onSubmit()" [disabled]="!form.valid">Save</button>
+    </div>
+  </form>
+  {{form.value|json}}
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad|json}}
+  </div>
+</div>
