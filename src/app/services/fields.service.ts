@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { FieldBase } from "../form-field-models/field-base";
 import { DropdownField } from "../form-field-models/dropdown-field";
 import { TextboxField } from "../form-field-models/textbox-field";
+import { CheckboxField } from "../form-field-models/checkbox-field";
 
 @Injectable()
 export class FieldsService {
@@ -34,6 +35,12 @@ export class FieldsService {
             label: 'Email',
             type: 'email',
             order: 2
+          }),
+          new CheckboxField({
+            key: 'accept',
+            value:false,
+            label:'Accept terms and conditions?',
+            order:4
           })
         ];
     

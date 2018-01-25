@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsComponent } from './forms/forms.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/form', pathMatch: 'full' },
-  { path: 'form',component: FormsComponent}
+  { path: 'form',component: FormsComponent},
+  { path: '', redirectTo: '/form', pathMatch: 'full' }
 ];
 
 @NgModule({
